@@ -1,0 +1,266 @@
+:root {
+    --width: 92vw;        
+    --display-service:flex;
+    --display-columns:80% 20%;
+    --display-form:start;
+    @media (max-width: 600px) {
+        --width: 98vw;     
+        --display-service:grid;
+        --display-columns:100%;
+        --display-form:center;
+    
+    }
+}
+
+.brands-component {
+    margin: 0;
+    padding-top: 80px;
+    min-height: 100vh;
+    max-height: 100%;
+    background: #353535;
+    color: #fff;
+
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .brand_container {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brand_whole_form {
+        width: var(--width);
+        gap: 5px;
+        display: grid;
+        grid-template-columns: var(--display-columns);
+        padding: 10px;
+        border-radius: 7.5px;
+        background: #4577F6;
+        box-shadow: 0 4px 4px rgba(34, 34, 34, 0.842);
+
+
+        & > * {
+            align-self: center;
+            justify-self: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .brand-form {
+        display: flex;
+        align-items: center;
+        justify-content: var(--display-form);
+        flex-basis: 200px;
+        width: 100%;
+        gap: 10px;
+        .brand-input {
+            align-self: center;
+            justify-self: center;
+            // flex-grow: 1;
+            flex-shrink: 1;
+            input {
+                width: 100%;
+                height: 34px;
+                border-radius: 5px;
+                border: 0px;
+                outline: none;
+                padding: 5px;
+                background: #F4F4F4;
+                font-weight: 300;
+                &::placeholder {
+                    color: black;
+                }
+            }
+        }
+        .icons {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 7.5px;
+        }
+        .post__pictures {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .post_pic {
+                height: 40px;
+                margin: 0;
+                padding: 5px;
+                display: grid;
+                grid-template-columns: 50px calc(100% - 50px);
+                color: #000;
+                & > * {
+                    align-self: center;
+                    justify-self: center;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    overflow: hidden;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+        }
+    }
+    .button_form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            width: 80%;
+            padding: 5px;
+            border: 0px;
+            outline: none;
+            border-radius: 7.5px;
+            background: white;
+        }
+    }
+    .showListBrands {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+        & > * {
+            align-self: center;
+            justify-self: center;
+
+        }
+
+        .show-nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+
+            input {
+                width: 300px;
+                color: #fff;
+                padding: 5px ;
+                border-radius: 5px;
+                background: #616161;
+                outline: none;
+                border: 0px;
+                box-shadow: 0 4px 4px rgba(34, 34, 34, 0.842);
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+
+            & > * {
+                flex-basis: auto;
+                // width: 300px;
+            }
+        }
+
+        .items-new {
+            width: 260px;
+            height: 330px;
+            background: #404041;
+            box-shadow: 0 4px 4px rgba(34, 34, 34, 0.842);
+            border-radius: 5px;
+            align-self: center;
+            justify-self: center;
+            display: grid;
+            grid-template-rows:  60% 20% 20%;
+            gap: 5px;
+            padding: 7.5px;
+            border-radius: 5px;
+            & > * {
+                margin: 0;
+                padding: 0;
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                align-self: center;
+                justify-self: center;
+            }
+            .tag-del,.tag-edit,button {
+                align-self: center;
+                justify-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    width: 25px;
+                    height: 25px;
+
+                }
+            }
+            .button-brand {
+                gap: 10px;
+            }
+            button {
+                width: 100%;
+                padding: 2.5px 5px;
+                border-radius: 5px;
+                outline: none;
+                border: 0px;
+                color: #fff;
+            }
+            img {
+                align-self: center;
+                justify-self: center;
+                width: 100%;
+                height: 100%;
+                background: white;
+            }
+            input {
+                color: #000;
+                padding: 5px;
+                height: 30px;
+                outline: none;
+                
+            }
+        }
+        .show_grid_list_brands {
+            // width: 100%;
+            align-self: center;
+            justify-self: center;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(4,minmax(260px,1fr));
+            gap: 20px;
+            padding: 3px;
+        }
+    }
+
+}

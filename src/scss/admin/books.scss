@@ -1,0 +1,186 @@
+:root {
+    --width: 92vw;        
+    --display-service:flex;
+    --display-columns:80% 20%;
+    --display-form:start;
+    @media (max-width: 600px) {
+        --width: 98vw;     
+        --display-service:grid;
+        --display-columns:100%;
+        --display-form:center;
+    
+    }
+}
+
+.inventory-component,.brands-component,.services-component,.products-component,.books-component {
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            margin: 0 0.25rem;
+            padding: 0.5rem 1rem;
+            background-color: #ebebeb;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            &.active {
+                background-color: #ccc;
+            }
+        }
+
+        .previous,
+        .next {
+            font-weight: bold;
+        }
+    }
+}
+
+.books-component {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-top: 80px;
+    position: relative;
+    min-height: 100vh;
+    max-height: 100%;
+    background: #353535;
+    color: #fff;
+
+    .openSMS {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #202020bd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sms_component {
+            width: 320px;
+            height: 150px;
+            padding: 10px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.541);
+            color: #000;
+            h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .books-orders {
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        h4, p {
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        background: #1f1f1f;
+        padding: 10px;
+    }
+
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #1f1f1f;
+        border-radius: 0px;
+        .form-group {
+            border-radius: 0px;
+        }
+        label {
+            color: #fff;
+            display: flex;
+            align-items: center;    
+        }
+        select,input {
+            outline: none;
+            padding: 5px;
+            border: none;
+        }
+        .form-control {
+            border-radius: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    .table {
+        tbody {
+            tr {
+                .order-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // adapt number of columns based on available width
+                    gap: 1rem;
+                    overflow-x: auto;
+                    
+                    .order {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: 1px solid #fff;
+                        padding: 10px;
+                        border-radius: 5px;
+
+                        img {
+                            max-height: 80px;
+                            max-width: 80px;
+                            object-fit: cover;
+                        }
+
+                        .items_grid {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.25rem;
+                        font-size: 0.8rem; // reduce font size
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        }
+                    }
+                }
+
+                .button_labels {
+                    display: grid;
+                    height: 100%;
+                    gap: 10px;
+
+                    .approved {
+                        padding: 4px 7.5px;
+                        background: #fff;
+                        border: 0px;
+                        border-radius: 5px;
+                        outline: none;
+                        cursor:inherit;
+                    }
+                }
+
+                .labels {
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
